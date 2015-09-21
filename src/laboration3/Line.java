@@ -13,6 +13,11 @@ public class Line extends Shape{
     
     /**
      * Constructor creates the line
+     * @param x 
+     * @param y
+     * @param x2
+     * @param y2
+     * @param color
      */
     public Line(double x, double y,double x2,double y2, Color color){
         super(x,y,color);
