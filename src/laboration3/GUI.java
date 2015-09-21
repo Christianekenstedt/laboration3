@@ -76,7 +76,7 @@ public class GUI extends Application {
         canvas.heightProperty().bind(scene.heightProperty());
         root.getChildren().add(canvas);
 
-        stage.setTitle("Bounce");
+        stage.setTitle("Shapes");
         stage.setScene(scene);
         stage.setResizable(true);
         stage.sizeToScene();
