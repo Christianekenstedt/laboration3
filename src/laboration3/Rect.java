@@ -27,11 +27,17 @@ public class Rect extends FillableShape{
     public double getHeight(){
         return height;
     }
-    @Override
+    public void setWidht(double width){
+        this.width = width;
+    }
+    public void setHeight(double height){
+        this.height = height;
+    }
+    /*@Override
     public void constrain(double x, double y, //fixa!!
             double c, double d){
-
-    }
+    
+    }*/
     @Override
     public void paint(GraphicsContext gc){
         if(getFilled()){

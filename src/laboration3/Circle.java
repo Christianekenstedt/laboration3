@@ -17,10 +17,27 @@ public class Circle extends FillableShape{
     public double getDiameter(){
         return diameter;
     }
+    public void setDiameter(double diameter){
+        this.diameter = diameter;
+    }
     @Override
-    public void constrain(double x, double y, //fixa!!
-            double c, double d){
-
+    public void constrain(double boxX, double boxY, //fixa!!
+            double boxWidth, double boxHeight){
+        double dx,dy;
+        if (getX() < boxX + diameter/2) {
+            dx = Math.abs(getDx());
+            super.setVelocity(dx, getDy());
+        } else if (getX() > boxWidth- diameter/2) {
+            dx = -Math.abs(getDx());
+            super.setVelocity(dx, getDy());
+        }
+        if (getY() < boxY+ diameter/2) {
+            dy = Math.abs(getDy());
+            super.setVelocity(getDx(), dy);
+        } else if (getY() > boxHeight- diameter/2) {
+            dy = -Math.abs(getDy());
+            super.setVelocity(getDx(), dy);
+        }
     }
     @Override
     public void paint(GraphicsContext gc){

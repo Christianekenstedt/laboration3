@@ -56,11 +56,11 @@ public class Line extends Shape{
         x2 += getDx() * elapsedTimeNs / BILLION;
     }
 
-    @Override
+    /*@Override
     public void constrain(double x, double y, //fixa!!
             double c, double d){
-
-    }
+    
+    }*/
     /**
      * Paints the line.
      */
