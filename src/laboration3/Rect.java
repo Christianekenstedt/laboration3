@@ -33,11 +33,25 @@ public class Rect extends FillableShape{
     public void setHeight(double height){
         this.height = height;
     }
-    /*@Override
-    public void constrain(double x, double y, //fixa!!
-            double c, double d){
-    
-    }*/
+    @Override
+    public void constrain(double boxX, double boxY, //fixa!!
+            double boxWidth, double boxHeight){
+        double dx,dy;
+        if (getX() < boxX) {
+            dx = Math.abs(getDx());
+            super.setVelocity(dx, getDy());
+        } else if (getX() > boxWidth - width) {
+            dx = -Math.abs(getDx());
+            super.setVelocity(dx, getDy());
+        }
+        if (getY() < boxY) {
+            dy = Math.abs(getDy());
+            super.setVelocity(getDx(), dy);
+        } else if (getY() > boxHeight - height) {
+            dy = -Math.abs(getDy());
+            super.setVelocity(getDx(), dy);
+        }
+    }
     @Override
     public void paint(GraphicsContext gc){
         if(getFilled()){
