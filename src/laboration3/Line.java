@@ -71,7 +71,8 @@ public class Line extends Shape{
     }
     @Override
     public String toString(){
-        String info = new String();
+        String info;
+        info = "Line between:\n(" + getX() + "," + getY() + ") and (" + getX2() + "," + getY2()+")";
         return info;
     }
 }

@@ -45,7 +45,8 @@ public class Rect extends FillableShape{
     }
     @Override
     public String toString(){
-        String info = new String();
+        String info;
+        info = "Rect:\nx = " + getX() + " y = " + getY() + " width = " + getWidth() + " height = " + getHeight();
         return info;
     }
 }

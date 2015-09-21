@@ -34,7 +34,8 @@ public class Circle extends FillableShape{
     }
     @Override
     public String toString(){
-        String info = new String();
+        String info;
+        info = "Circle with center at:\n(" + getX() + "," + getY() + ") and a diameter = " + getDiameter();
         return info;
     }
 }
