@@ -24,7 +24,7 @@ public class World {
         this.width = width;
         this.height = height;
 
-        shapes = new Shape[1]; // an array of references (change to non-zero size)
+        shapes = new Shape[0]; // an array of references (change to non-zero size)
         // Create the actual Shape objects (sub types)
         // ....
     }
