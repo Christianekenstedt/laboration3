@@ -54,7 +54,8 @@ public class GUI extends Application {
             // paint the background
             gc.setFill(Color.WHITESMOKE);
             gc.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
-
+            
+            
             // paint the shapes
             for (Shape b : world.getShapes()) {
                 b.paint(gc);
