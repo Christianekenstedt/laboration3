@@ -23,6 +23,7 @@ public class Circle extends FillableShape{
             gc.setFill(getColor());
             gc.fillOval(getX() - (diameter/2), getY() - (diameter/2), diameter, diameter);
         }else{
+            gc.setStroke(getColor());
             gc.strokeOval(getX() - (diameter/2), getY() - (diameter/2), diameter, diameter);
         }
     }
