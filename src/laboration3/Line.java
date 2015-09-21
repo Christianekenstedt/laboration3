@@ -43,6 +43,6 @@ public class Line extends Shape{
      */
     @Override
     public void paint(GraphicsContext gc){
-        
+        gc.strokeLine(getX(), getY(), x2, y2);    
     }
 }
