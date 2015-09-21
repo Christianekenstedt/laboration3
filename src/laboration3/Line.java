@@ -39,6 +39,13 @@ public class Line extends Shape{
         return y2;
     }
     
+    public void setX2(double x2){
+        this.x2 = x2; 
+    }
+    public void setY2(double y2){
+        this.y2 = y2; 
+    }
+    
     @Override
     public void move(long elapsedTimeNs) {
         
@@ -48,7 +55,12 @@ public class Line extends Shape{
         y2 += getDy() * elapsedTimeNs / BILLION;
         x2 += getDx() * elapsedTimeNs / BILLION;
     }
-    
+
+    @Override
+    public void constrain(double a, double b, //fixa!!
+            double c, double d){
+        
+    }
     /**
      * Paints the line.
      */
@@ -56,5 +68,10 @@ public class Line extends Shape{
     public void paint(GraphicsContext gc){
         gc.setStroke(getColor());
         gc.strokeLine(getX(), getY(), x2, y2);    
+    }
+    @Override
+    public String toString(){
+        String info = new String();
+        return info;
     }
 }
