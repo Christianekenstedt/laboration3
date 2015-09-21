@@ -38,6 +38,17 @@ public class Line extends Shape{
     public double getY2(){
         return y2;
     }
+    
+    @Override
+    public void move(long elapsedTimeNs) {
+        
+        setX((getDx() * elapsedTimeNs / BILLION) + getX());
+        setY((getDy() * elapsedTimeNs / BILLION) + getY());
+
+        y2 += getDy() * elapsedTimeNs / BILLION;
+        x2 += getDx() * elapsedTimeNs / BILLION;
+    }
+    
     /**
      * Paints the line.
      */
