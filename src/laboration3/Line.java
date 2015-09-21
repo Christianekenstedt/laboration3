@@ -56,11 +56,40 @@ public class Line extends Shape{
         x2 += getDx() * elapsedTimeNs / BILLION;
     }
 
-    /*@Override
-    public void constrain(double x, double y, //fixa!!
-            double c, double d){
-    
-    }*/
+    @Override
+    public void constrain(double boxX, double boxY, //fixa!!
+            double boxWidth, double boxHeight){
+        double dx,dy;
+        if (getX() < boxX) {
+            dx = Math.abs(getDx());
+            super.setVelocity(dx, getDy());
+        } else if (getX() > boxWidth) {
+            dx = -Math.abs(getDx());
+            super.setVelocity(dx, getDy());
+        }
+        if (getY() < boxY) {
+            dy = Math.abs(getDy());
+            super.setVelocity(getDx(), dy);
+        } else if (getY() > boxHeight) {
+            dy = -Math.abs(getDy());
+            super.setVelocity(getDx(), dy);
+        }
+        
+        if (x2 < boxX) {
+            dx = Math.abs(getDx());
+            super.setVelocity(dx, getDy());
+        } else if (x2 > boxWidth) {
+            dx = -Math.abs(getDx());
+            super.setVelocity(dx, getDy());
+        }
+        if (y2 < boxY) {
+            dy = Math.abs(getDy());
+            super.setVelocity(getDx(), dy);
+        } else if (y2 > boxHeight) {
+            dy = -Math.abs(getDy());
+            super.setVelocity(getDx(), dy);
+        }
+    }
     /**
      * Paints the line.
      */
