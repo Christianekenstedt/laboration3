@@ -18,6 +18,11 @@ public class Circle extends FillableShape{
         return diameter;
     }
     @Override
+    public void constrain(double x, double y, //fixa!!
+            double c, double d){
+
+    }
+    @Override
     public void paint(GraphicsContext gc){
         if(getFilled()){
             gc.setFill(getColor());
@@ -26,5 +31,10 @@ public class Circle extends FillableShape{
             gc.setStroke(getColor());
             gc.strokeOval(getX() - (diameter/2), getY() - (diameter/2), diameter, diameter);
         }
+    }
+    @Override
+    public String toString(){
+        String info = new String();
+        return info;
     }
 }

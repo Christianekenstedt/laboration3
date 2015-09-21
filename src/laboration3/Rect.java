@@ -28,6 +28,11 @@ public class Rect extends FillableShape{
         return height;
     }
     @Override
+    public void constrain(double x, double y, //fixa!!
+            double c, double d){
+
+    }
+    @Override
     public void paint(GraphicsContext gc){
         if(getFilled()){
             gc.setFill(getColor());
@@ -37,5 +42,10 @@ public class Rect extends FillableShape{
             gc.strokeRect(getX(), getY(), width, height);
 
         }
+    }
+    @Override
+    public String toString(){
+        String info = new String();
+        return info;
     }
 }

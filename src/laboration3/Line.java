@@ -57,9 +57,9 @@ public class Line extends Shape{
     }
 
     @Override
-    public void constrain(double a, double b, //fixa!!
+    public void constrain(double x, double y, //fixa!!
             double c, double d){
-        
+
     }
     /**
      * Paints the line.
