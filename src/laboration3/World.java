@@ -72,7 +72,10 @@ public class World {
     public Shape[] getShapes() {
         return (Shape[]) shapes.clone();
     }
-    
+    /**
+     * Toggle the shapes with filled or not filled.
+     * @param elapsedTime 
+     */
     public void toggleFill(long elapsedTime){        
         for (Shape shape : shapes) {
             if (shape instanceof Rect) {
