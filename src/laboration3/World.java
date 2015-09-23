@@ -73,14 +73,11 @@ public class World {
         return (Shape[]) shapes.clone();
     }
     
-    public void toggleFill(long elapsedTime){
-        
-        
-        System.out.println(elapsedTime/time);
+    public void toggleFill(long elapsedTime){        
         for (Shape shape : shapes) {
             if (shape instanceof Rect) {
                 if (elapsedTime/time > 175) {
-                    if(((Rect)shape).getFilled()){
+                    if(((Rect) shape).getFilled()){
                        ((Rect) shape).setFilled(false); 
                     }else{
                        ((Rect) shape).setFilled(true);
