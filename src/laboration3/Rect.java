@@ -33,6 +33,15 @@ public class Rect extends FillableShape{
     public void setHeight(double height){
         this.height = height;
     }
+    public void toggleFilled(){
+        System.out.println("hello");
+        if(super.getFilled()){
+            super.setFilled(false);
+        }else{
+            super.setFilled(true);
+            
+        }
+    }
     @Override
     public void constrain(double boxX, double boxY, //fixa!!
             double boxWidth, double boxHeight){

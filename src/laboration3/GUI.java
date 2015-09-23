@@ -46,6 +46,7 @@ public class GUI extends Application {
 
             // move the objects in the world
             world.move(nowNs - previousNs); // elapsed time
+            world.toggleFill(nowNs - previousNs);
             // save the new timestamp, for the next cycle
             previousNs = nowNs;
 
