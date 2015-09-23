@@ -80,11 +80,8 @@ public class World {
         for (Shape shape : shapes) {
             if (shape instanceof Rect) {
                 if (elapsedTime/time > 175) {
-                    if(((Rect) shape).getFilled()){
-                       ((Rect) shape).setFilled(false); 
-                    }else{
-                       ((Rect) shape).setFilled(true);
-                    }
+                    if(((Rect) shape).getFilled())((Rect) shape).setFilled(false);    
+                    else ((Rect) shape).setFilled(true);
                 }
             }
         }
