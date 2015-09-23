@@ -10,7 +10,7 @@ import javafx.scene.paint.Color;
 public class World {
 
     private double width, height; // this worlds width and height
-    private static final long time = (long) 1_000_000.0;
+    private static final long time = (long) 1_000_00.0;
     private final Shape[] shapes; // an array of references to the shapes
 
     /**
@@ -79,7 +79,7 @@ public class World {
         System.out.println(elapsedTime/time);
         for(int i = 0; i < shapes.length; i++){
             if(shapes[i] instanceof Rect){
-                if(elapsedTime/time > 16){
+                if(elapsedTime/time > 175){
                     ((Rect)shapes[i]).toggleFilled();
                     
                 }
