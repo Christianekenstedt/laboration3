@@ -77,11 +77,10 @@ public class World {
         
         
         System.out.println(elapsedTime/time);
-        for(int i = 0; i < shapes.length; i++){
-            if(shapes[i] instanceof Rect){
-                if(elapsedTime/time > 175){
-                    ((Rect)shapes[i]).toggleFilled();
-                    
+        for (Shape shape : shapes) {
+            if (shape instanceof Rect) {
+                if (elapsedTime/time > 175) {
+                    ((Rect) shape).toggleFilled();
                 }
             }
         }
